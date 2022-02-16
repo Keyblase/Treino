@@ -1,16 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using Treino.Core.Entidades;
 using Treino.Core.Interfaces;
 using Treino.Core.Services;
 using Treino.Data;
@@ -36,6 +30,9 @@ namespace Treino.Web
 
 
             services.AddControllersWithViews();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddControllersWithViews();
+            services.AddRazorPages();
 
             //Configuracao de cultura pt-BR
             var cultureInfo = new CultureInfo("pt-BR");
@@ -71,10 +68,24 @@ namespace Treino.Web
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapAreaControllerRoute(
+                   name: "Netlify",
+                   areaName: "Netlify",
+                   pattern: "Netlify/{controller=Home}/{action=Index}");
+
+                endpoints.MapAreaControllerRoute(
+                   name: "StudioGhibli",
+                   areaName: "StudioGhibli",
+                   pattern: "StudioGhibli/{controller=Home}/{action=Index}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapRazorPages();
             });
+
+
         }
     }
 }

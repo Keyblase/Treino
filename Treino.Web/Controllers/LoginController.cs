@@ -6,7 +6,7 @@ namespace Treino.Web.Controllers
 {
     public class LoginController : Controller
     {
-        LoginApiController _loginApiController ;
+        LoginApiController _loginApiController;
 
         public LoginController()
         {

@@ -53,14 +53,14 @@ namespace Treino.ConsoleApp
         {
             Dictionary<string, PessoaModel> dicionarioPessoa = new Dictionary<string, PessoaModel>();
 
-            dicionarioPessoa.Add("1", new PessoaModel() { id = "1" , name = "joao"});
+            dicionarioPessoa.Add("1", new PessoaModel() { id = "1", name = "joao" });
             dicionarioPessoa.Add("2", new PessoaModel() { id = "2", name = "sa" });
             dicionarioPessoa.Add("3", new PessoaModel() { id = "3", name = "ds" });
 
             foreach (KeyValuePair<string, PessoaModel> items in dicionarioPessoa)
             {
                 if (dicionarioPessoa.Count > 0)
-                    Console.WriteLine("Chave: " + items.Key.ToString() + "  -  Id: " + items.Value.id.ToString() 
+                    Console.WriteLine("Chave: " + items.Key.ToString() + "  -  Id: " + items.Value.id.ToString()
                         + " - Nome: " + items.Value.name.ToString());
             }
 

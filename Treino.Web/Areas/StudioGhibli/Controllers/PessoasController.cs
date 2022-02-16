@@ -7,6 +7,7 @@ using Treino.ViewModels;
 
 namespace Treino.Web.Controllers
 {
+    [Area("StudioGhibli")]
     public class PessoasController : Controller
     {
         PessoasApiController _pessoasApiController;

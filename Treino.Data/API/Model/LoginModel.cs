@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Treino.Data.API.Model;
-
-namespace Treino.Data.API.Model
+﻿namespace Treino.Data.API.Model
 {
     public class LoginModel
     {

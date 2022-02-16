@@ -1,5 +1,3 @@
-using System;
-
 namespace Treino.Web.Models
 {
     public class ErrorViewModel

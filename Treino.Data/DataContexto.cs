@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Treino.Core.Entidades;
 
 namespace Treino.Data
@@ -10,8 +8,8 @@ namespace Treino.Data
     public class DataContexto : DbContext
     {
         public DataContexto(DbContextOptions<DataContexto> options) : base(options)
-        { 
-        
+        {
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -63,7 +61,7 @@ namespace Treino.Data
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<UsuarioEntity> Usuarios { get; set; }
-        public DbSet<EspecieEntity> Especies{ get; set; }
+        public DbSet<EspecieEntity> Especies { get; set; }
         public DbSet<FilmeEntity> Filmes { get; set; }
         public DbSet<LocalEntity> Locais { get; set; }
         public DbSet<PessoaEntity> Pessoas { get; set; }

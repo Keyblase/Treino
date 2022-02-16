@@ -12,7 +12,7 @@ namespace Treino.Web.Controllers
 
         public BoletoController()
         {
-            
+
         }
         // GET: BoletoController
         public ActionResult Index()

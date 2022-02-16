@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Treino.Data.API.Model;
 using Treino.Data.API.Repositories;

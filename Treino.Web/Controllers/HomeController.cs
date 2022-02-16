@@ -35,7 +35,7 @@ namespace Treino.Web.Controllers
         [Authorize]
         public IActionResult Home()
         {
-            return View(); 
+            return View();
         }
 
         [HttpPost]

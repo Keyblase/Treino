@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Treino.Core.Entidades
+﻿namespace Treino.Core.Entidades
 {
     public class PessoaEntity
     {

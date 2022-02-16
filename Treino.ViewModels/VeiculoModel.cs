@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Treino.ViewModels
+﻿namespace Treino.ViewModels
 {
     public class VeiculoModel
     {
