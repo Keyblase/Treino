@@ -2,10 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Treino.Core.Interfaces;
-using Treino.Data;
 
 namespace Treino.Data.Repositorio
 {

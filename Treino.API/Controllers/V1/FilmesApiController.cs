@@ -58,7 +58,7 @@ namespace Treino.API.Controllers.V1
         /// <response code="200">Retorna a lista de filme</response>
         /// <response code="204">Caso não haja filme</response>
         [HttpGet("Obtem")]
-        public async Task<ObjectResult> ListaFilme(string id = "",string url = "")
+        public async Task<ObjectResult> ListaFilme(string id = "", string url = "")
         {
             string baseURL;
 

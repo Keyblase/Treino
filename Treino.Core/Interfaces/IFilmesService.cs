@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Treino.Core.Entidades;
-using Treino.ViewModels;
 
 namespace Treino.Core.Interfaces
 {

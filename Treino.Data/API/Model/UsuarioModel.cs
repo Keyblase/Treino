@@ -1,5 +1,4 @@
-﻿using System;
-using Treino.Core.Entidades;
+﻿using Treino.Core.Entidades;
 
 namespace Treino.Data.API.Model
 {

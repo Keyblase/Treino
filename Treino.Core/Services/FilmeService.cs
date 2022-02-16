@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Treino.Core.Entidades;
 using Treino.Core.Interfaces;
-using Treino.ViewModels;
 
 namespace Treino.Core.Services
 {
-    public class FilmeService  : IFilmesService /* BaseService<FilmeEntity>, */
+    public class FilmeService : IFilmesService /* BaseService<FilmeEntity>, */
     {
         //private readonly IDadosRepositorio _repositorio;
 

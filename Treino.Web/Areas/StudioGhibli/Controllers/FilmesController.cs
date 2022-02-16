@@ -9,6 +9,7 @@ using Treino.ViewModels;
 
 namespace Treino.Web.Controllers
 {
+    [Area("StudioGhibli")]
     public class FilmesController : Controller
     {
         FilmesApiController _filmesApiController;
@@ -52,7 +53,7 @@ namespace Treino.Web.Controllers
                         Descricao = filme.description,
                         Diretor = filme.director,
                         Data_Lancamento = filme.release_date,
-                        Localizacoes = new List<LocalEntity>(){ new LocalEntity() { Nome = "testeLocal"} }/*filme.locations*/,
+                        Localizacoes = new List<LocalEntity>() { new LocalEntity() { Nome = "testeLocal" } }/*filme.locations*/,
                         Pessoas = new List<PessoaEntity>() { new PessoaEntity() { Nome = "testePessoa" } }/*filme.people*/,
                         Produtor = filme.producer,
                         Score = filme.rt_score,

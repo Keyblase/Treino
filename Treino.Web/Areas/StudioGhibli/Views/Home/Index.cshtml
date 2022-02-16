@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Pagina Inicial Studio Ghibi";
+}
+<div class="position-relative overflow-hidden text-center bg-light">
+    <div class="col-md-12 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal"> @ViewData["Title"] - Api  </h1>
+        <p class="lead font-weight-normal">Clique em um botão para fazer uma requisição do Estudio</p>
+        <div class="btn-group" role="group" aria-label="Acoes Api">
+            <a asp-controller="Especies" asp-action="Lista" class="btn btn-primary mr-2">Espécies</a>
+            <a asp-controller="Filmes" asp-action="Lista" class="btn btn-primary mr-2">Filmes</a>
+            <a asp-controller="Locais" asp-action="Lista" class="btn btn-primary mr-2">Locais</a>
+            <a asp-controller="Pessoas" asp-action="Lista" class="btn btn-primary mr-2">Pessoas</a>
+            <a asp-controller="Veiculos" asp-action="Lista" class="btn btn-primary">Veiculos</a>
+        </div>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+@section Scripts{
+  
+}
