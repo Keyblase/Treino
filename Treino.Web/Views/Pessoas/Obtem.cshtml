@@ -1,0 +1,125 @@
+﻿@model Treino.ViewModels.PessoaModel
+
+@{
+    ViewData["Title"] = "Pessoa Descrição";
+}
+<div>
+    <a asp-action="Lista">Retorna a Lista</a>
+</div>
+<header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="...">
+        <h1 class="text-white fs-3 fw-bolder">@Model.name</h1>
+        <p class="text-white-50 mb-0">@ViewData["Title"]</p>
+    </div>
+</header>
+
+<section class="pt-4">
+    <div class="container px-lg-5">
+        <!-- Page Features-->
+        <div class="row gx-lg-5">
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class=""></i></div>
+                        <h2 class="fs-4 fw-bold">Nome do Ator</h2>
+                        <p class="mb-0">@Model.name</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                        <h2 class="fs-4 fw-bold">ID</h2>
+                        <p class="mb-0">@Model.id</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                        <h2 class="fs-4 fw-bold">Genêro</h2>
+                        <p class="mb-0">@Model.gender</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                        <h2 class="fs-4 fw-bold">Idade</h2>
+                        <p class="mb-0">@Model.age</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                        <h2 class="fs-4 fw-bold">Cor dos Olhos</h2>
+                        <p class="mb-0">@Model.eye_color</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <h2 class="fs-4 fw-bold">Cor dos Cabelos</h2>
+                        <p class="mb-0">@Model.hair_color</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <h2 class="fs-4 fw-bold">Filmes estreados</h2>
+                        @foreach (var filme in Model.filmesModel)
+                        {
+                            <p class="mb-0">@filme.id</p>
+                            @*<p class="mb-0">@filme.locations</p>*@
+                            <p class="mb-0">@filme.description</p>
+                            <p class="mb-0">@filme.director</p>
+                            <p class="mb-0">@filme.original_title</p>
+                            <p class="mb-0">@filme.original_title_romanised</p>
+                            <p class="mb-0">@filme.people</p>
+                            <p class="mb-0">@filme.producer</p>
+                            <p class="mb-0">@filme.release_date</p>
+                            <p class="mb-0">@filme.title</p>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <h2 class="fs-4 fw-bold">Especie</h2>                      
+                            <p class="mb-0">@Model.especieModel.name</p>
+                            <p class="mb-0">@Model.especieModel.classification</p>
+                            <p class="mb-0">@Model.especieModel.eye_colors</p>
+                            <p class="mb-0">@Model.especieModel.url</p>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*
+    <div>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.species)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.url)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.url)
+            </dd>
+        </dl>
+    </div>
+    <div>
+*@

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Treino.API</name>
+    </assembly>
+    <members>
+        <member name="M:Treino.API.Controllers.V1.EspeciesApiController.Listar">
+            <summary>
+            Requisição para buscar todos as especies Studio Ghibli
+            </summary>
+            <response code="200">Retorna a lista de especies</response>
+            <response code="204">Caso não haja especies</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.EspeciesApiController.ListaEspecie(System.String,System.String)">
+            <summary>
+            Requisição para buscar a especies/id Studio Ghibli
+            </summary>
+            <param name="id">Parametro id da especie desejada</param>
+            <param name="url">Parametro de url de pesquisa</param>
+            <response code="200">Retorna a lista de especie</response>
+            <response code="204">Caso não haja especie</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.FilmesApiController.Listar">
+            <summary>
+            Requisição para buscar todos as filmes Studio Ghibli
+            </summary>
+            <response code="200">Retorna a lista de filmes</response>
+            <response code="204">Caso não haja filmes</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.FilmesApiController.ListaFilme(System.String,System.String)">
+            <summary>
+            Requisição para buscar a filmes/id Studio Ghibli
+            </summary>
+            <param name="id">Parametro id da filme desejado</param>
+            <param name="url">Parametro de url de pesquisa</param>
+            <response code="200">Retorna a lista de filme</response>
+            <response code="204">Caso não haja filme</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.LocaisApiController.Listar">
+            <summary>
+            Requisição para buscar todos as locais Studio Ghibli
+            </summary>
+            <response code="200">Retorna a lista de locais</response>
+            <response code="204">Caso não haja locais</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.PessoasApiController.Listar">
+            <summary>
+            Requisição para buscar todos as pessoas Studio Ghibli
+            </summary>
+            <response code="200">Retorna a lista de pessoas</response>
+            <response code="204">Caso não haja pessoas</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.PessoasApiController.ListaPessoa(System.String,System.String)">
+            <summary>
+            Requisição para buscar a pessoas/id Studio Ghibli
+            </summary>
+            <param name="id">Parametro id da pessoa desejado</param>
+            <param name="url">Parametro de url de pesquisa</param>
+            <response code="200">Retorna a lista de pessoa</response>
+            <response code="204">Caso não haja pessoa</response>
+        </member>
+        <member name="M:Treino.API.Controllers.V1.VeiculosApiController.Listar">
+            <summary>
+            Requisição para buscar todos as veiculos Studio Ghibli
+            </summary>
+            <response code="200">Retorna a lista de veiculos</response>
+            <response code="204">Caso não haja veiculos</response>
+        </member>
+    </members>
+</doc>

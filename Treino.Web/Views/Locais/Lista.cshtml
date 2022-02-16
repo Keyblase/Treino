@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Treino.ViewModels.LocalModel>
+
+@{
+    ViewData["Title"] = "Locais";
+}
+<div class="position-relative overflow-hidden text-center bg-light">
+    <div class="col-md-12 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal"> Api Studio Ghibi - @ViewData["Title"] </h1>
+        <p class="lead font-weight-normal">Requisição para Listar todos os @ViewData["Title"] do Studio Ghibi.</p>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+@foreach (var especie in Model)
+{
+    <div class="w-100 my-md-3 pl-md-3">
+        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">@especie.name</h2>
+                @*<p class="small">Id: @especie.id</p>
+                <p class="lead">@especie.gender | Idade: @especie.age </p>
+                <p class="lead">Cor dos Olhos @especie.eye_color | Cor do Cabelo: @especie.hair_color</p>
+                <a asp-controller="Pessoas" asp-action="ObtemPessoa" asp-route-id="@especie.id" class="btn btn-info">Detalhes</a>*@
+
+            </div>
+            <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <h3>Participação em Filmes </h3>
+                    @* @foreach (var filmesRealizados in especie.filmesModel)
+                    {
+                        <h4 class="display-5">@filmesRealizados.title</h4>
+                        <p class="lead">@filmesRealizados.description</p>
+                        <p class="lead">@filmesRealizados.locations</p>
+                        <p class="lead">@filmesRealizados.producer</p>-->
+
+                    }*@
+
+                </div>
+            </div>
+        </div>
+    }

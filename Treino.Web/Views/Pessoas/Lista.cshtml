@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Treino.ViewModels.PessoaModel>
+
+@{
+    ViewData["Title"] = "Pessoa";
+}
+<div class="position-relative overflow-hidden text-center bg-light">
+    <div class="col-md-12 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal"> Api Studio Ghibi - Pessoas </h1>
+        <p class="lead font-weight-normal">Requisição para Listar todos as Pessoas do Studio Ghibi.</p>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+@foreach (var pessoa in Model)
+{
+    <div class="w-100 my-md-3 pl-md-3">
+        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">@pessoa.name</h2>
+                <p class="small">Id: @pessoa.id</p>
+                <p class="lead">@pessoa.gender | Idade: @pessoa.age </p>
+                <p class="lead">Cor dos Olhos @pessoa.eye_color | Cor do Cabelo: @pessoa.hair_color</p>
+                <p class="small">Url para essa requisição: @pessoa.url</p>
+
+                <a asp-controller="Pessoas" asp-action="ObtemPessoa" asp-route-id="@pessoa.id" class="btn btn-info">Detalhes</a>
+
+            </div>
+            <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <h3 class="text-dark">Participação em Filmes </h3>
+                @foreach (var filmesRealizados in pessoa.filmesModel)
+                {
+                    <h4 class="display-5">@filmesRealizados.title</h4>
+                    <p class="lead">@filmesRealizados.description</p>
+                    <p class="lead">@filmesRealizados.locations</p>
+                    <p class="lead">@filmesRealizados.producer</p>
+                    @*@filme.id</th>
+                    @filme.director</th>
+                    @filme.original_title</th>
+                    @filme.original_title_romanised
+                    @filme.people</th>
+                    @filme.release_date</th>
+                    </th>*@
+
+                }
+            </div>
+        </div>
+    </div>
+}
