@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Treino.ViewModels\Treino.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Boleto\" />
+  </ItemGroup>
+
 </Project>
