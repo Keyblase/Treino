@@ -34,11 +34,10 @@ namespace Treino.Web.Controllers
 
             var html = $"<html><title>PDF</title><body><b>{_banco.Nome} {contaBancaria}</b></body></html>";
 
-
             var htmlToPdf = new HtmlToPDFCore.HtmlToPDF();
             var pdf = htmlToPdf.ReturnPDF(html);
 
-            FileStream fs = new FileStream("teste1.pdf", FileMode.CreateNew);
+            FileStream fs = new FileStream("Boleto/treinoBoleto.pdf", FileMode.CreateNew);
             fs.Write(pdf, 0, pdf.Length);
             fs.Close();
 
