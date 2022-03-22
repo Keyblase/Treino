@@ -18,6 +18,7 @@ namespace Treino.ConsoleApp
             //DicionarioPessoalModel();
 
             //HashSetTreino();
+            EditorText.Menu();
         }
 
 
