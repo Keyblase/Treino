@@ -71,12 +71,12 @@ namespace Treino.Web
                 endpoints.MapAreaControllerRoute(
                    name: "Netlify",
                    areaName: "Netlify",
-                   pattern: "Netlify/{controller=Home}/{action=Index}");
+                   pattern: "Netlify/{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapAreaControllerRoute(
                    name: "StudioGhibli",
                    areaName: "StudioGhibli",
-                   pattern: "StudioGhibli/{controller=Home}/{action=Index}");
+                   pattern: "StudioGhibli/{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "default",

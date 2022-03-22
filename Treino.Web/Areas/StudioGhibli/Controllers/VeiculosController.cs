@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Treino.API.Controllers.V1;
 using Treino.ViewModels;
+using Treino.ViewModels.ViewModels;
 
 namespace Treino.Web.Controllers
 {
@@ -11,9 +12,15 @@ namespace Treino.Web.Controllers
     public class VeiculosController : Controller
     {
         VeiculosApiController _veiculosApiController;
+        FilmesApiController _filmeApiController;
+        PessoasApiController _pessoaApiController;
+
         public VeiculosController()
         {
             _veiculosApiController = new VeiculosApiController();
+            _filmeApiController = new FilmesApiController();
+            _pessoaApiController = new PessoasApiController();
+
         }
 
         [HttpGet]
@@ -21,13 +28,25 @@ namespace Treino.Web.Controllers
         {
             try
             {
-                var veiculoObjResult = await _veiculosApiController.Listar();
-                if (veiculoObjResult != null)
+                VeiculoViewModel veiculoViewModel = new VeiculoViewModel();
+
+                var veiculos = await _veiculosApiController.Listar();
+                veiculoViewModel.ListaVeiculos = (IEnumerable<VeiculoModel>)veiculos.Value;
+                List<FilmeModel> filmeModel = new List<FilmeModel>();
+
+                foreach (var veiculo in veiculoViewModel.ListaVeiculos)
                 {
-                    IEnumerable<VeiculoModel> listaVeiculos = (IEnumerable<VeiculoModel>)veiculoObjResult.Value;
-                    return View("Lista", listaVeiculos);
+                    foreach (var filmes in veiculo.Films)
+                    {
+                        var filmesObj = await _filmeApiController.ListaFilme("", filmes);
+                        filmeModel.Add((FilmeModel)filmesObj.Value);
+                    }
+                    veiculoViewModel.ListaFilme = filmeModel;
+                    var pessoaObj = await _pessoaApiController.ListaPessoa("", veiculo.Pilot);
+                    veiculoViewModel.Pessoa = (PessoaModel)pessoaObj.Value;             
                 }
-                return View("Lista", null);
+
+                return View("Lista", veiculoViewModel);
             }
             catch (Exception excessao)
             {
